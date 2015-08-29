@@ -1,3 +1,17 @@
+.footer
+
+	%span.email{data: {name: :seeds}}
+	|
+	written by
+	= link_to("Guillaume Fradin", "http://imdb.me/gui")+","
+	concept arts by
+	= link_to "Paul Chandler", "http://www.imdb.com/name/nm1578088"
+	and
+	= link_to "Julien Legay", "http://www.imdb.com/name/nm3988508"
+	-#%i.fi-mail
+
+
+
 = render 'layouts/elements/analytics'
 = javascript_include_tag "vendor/modernizr"
 = javascript_include_tag "application"

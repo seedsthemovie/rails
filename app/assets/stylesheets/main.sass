@@ -1,7 +1,12 @@
+$bg_color: #000
+$color: #ddd
+$faded_color: #999
+
+
 @import 'foundation-icons'
 
 body
-	background-color: black
+	background-color: $bg_color
 
 
 .parent-vertical-centering
@@ -9,17 +14,32 @@ body
 	flex-direction: column
 	justify-content: center
 
-h1, h2, h3, h4, h5, h6
+h1, h2, h3, h4, h5, h6, .modal_closer, .footer, .actions
 	font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif
 	font-weight: 300
-	color: #ddd !important
 
+	color: $color !important
 
-.main_title
+.modal_closer
+	&:hover
+		:cursor pointer
+		:text-decoration underline
+
+.main_title 
 	:margin-bottom 60px
 
 .actions
 	:margin-top 60px
+	:text-align center
 
 #concept_video
 	width: 100% !important
+	
+
+.footer
+	:margin-top 40px
+	:padding 10px
+	:text-align right
+	:border-top 1px solid $faded_color
+	:color $faded_color
+	:font-size 12px

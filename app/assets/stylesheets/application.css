@@ -15,9 +15,15 @@
 
  
  *= require_self
- *= require foundation_and_overrides
- *= require main
+ *= require lib/normalize
+
 
  *= require lib/slick_carousel
+
+ // had to download the css from the website, since the css from the gem stopped working, not sure why
+ *= require lib/foundation
+
+ *= require main 
+
  */
  

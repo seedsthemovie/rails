@@ -7,10 +7,12 @@
 
 				.text-center.main_title
 					%h1 SEEDS
-					%h4 a feature film by Guillaume Fradin
+					%h5 a feature film by Guillaume Fradin
 
 
 
 				= yield
 
-		= render 'layouts/footer'
+		.row
+			.column.small-12
+				= render 'layouts/footer'

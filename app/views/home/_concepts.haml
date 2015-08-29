@@ -9,8 +9,20 @@
 
 
 .text-center.actions
-	%a.button.tiny{href: "#"}
+	%a#video_opener.button.tiny.radius
+		-#{href:"#", data: {reveal: {id: "video_modal"}}}
 		%h4
 			%i.fi-play-circle
 			Watch Teaser
 	-#= mail_to "seeds@everytimehq.com", "contact us"
+
+#video_modal.reveal-modal.full{data: {reveal: true}, role: "dialog", aria: {labelledby: "modalTitle", hidden: "true"}}
+	-#%a.close-reveal-modal &#215;
+	.text-right
+		.modal_closer close
+
+	= render partial: 'home/video', locals: {autoplay: false}
+
+	.footer
+		%span.email{data: {name: :seeds}}
+
