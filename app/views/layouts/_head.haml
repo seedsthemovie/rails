@@ -1,0 +1,20 @@
+%head
+	%title
+		Seeds - The Film
+	-#= csrf_meta_tag
+	-#= raw(include_stylesheets :all)
+	-#= auto_discovery_link_tag :atom, feedburner_url
+	%meta{name: "description", content: "Seeds - The Film"}
+	%meta{name: "keywords", content: "Seeds"}
+	%meta{name: "author", content: "Guillaume Fradin"}
+	%meta{name: "viewport", content: "width=device-width, initial-scale=1"} 
+
+	-# google fonts
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+	-# videojs
+	<link href="//vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+
+	= stylesheet_link_tag "application", media: "all"
+
+

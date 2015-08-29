@@ -1,0 +1,16 @@
+
+
+- label = "NASA Shelter Concept Art"
+
+.parent-vertical-centering
+	.slick-carousel
+		- 4.times do |i|
+			= image_tag "concepts/shelter/shelter.large.b.0#{i+1}.jpg", alt: label
+
+
+.text-center.actions
+	%a.button.tiny{href: "#"}
+		%h4
+			%i.fi-play-circle
+			Watch Teaser
+	-#= mail_to "seeds@everytimehq.com", "contact us"

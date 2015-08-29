@@ -1,0 +1,16 @@
+!!!
+%html{html_attrs}
+	= render 'layouts/head'
+	%body
+		.row
+			.column.small-12
+
+				.text-center.main_title
+					%h1 SEEDS
+					%h4 a feature film by Guillaume Fradin
+
+
+
+				= yield
+
+		= render 'layouts/footer'
