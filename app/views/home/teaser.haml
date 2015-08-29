@@ -1,6 +1,13 @@
-= render partial: 'home/video', locals: {autoplay: true}
+.row
+	.column.small-12
+		= render partial: 'home/video', locals: {autoplay: true}
 
-.actions
-	%a{href: "/"}
-		%i.fi-arrow-left
-		View the concept arts
+		.actions
+			%a{href: "/"}
+				%i.fi-arrow-left
+				View the concept arts
+
+
+.row
+	.column.small-12
+		= render 'layouts/footer'
