@@ -1,11 +1,12 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: guillaumefradin_dev
+  database: mozaiku_dev
+  host: localhost
   pool: 5
-  username: frading
+  username: frading2
   password: password
-  
+
 
 production:
   adapter: postgresql
@@ -14,5 +15,3 @@ production:
   pool: 5
   username: frading
   password: password
-  
-
