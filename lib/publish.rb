@@ -23,18 +23,19 @@ class Publish
 		4.times do |i|
 			list << "/assets/concepts/shelter/shelter.large.b.0#{i+1}.jpg"
 		end
+		list << "/assets/icons/festival_award.png"
 
 		# video
 		list << "/assets/concept.mp4"
 
 
-		
+
 
 		list
 	end
 
 	def dest_folder
-		"/home/frading/work/web/films/seeds/github/seedsthemovie.github.io"
+		"/home/frading/work/web/films/seeds/github_page/seedsthemovie.github.io"
 	end
 
 	def host
@@ -55,7 +56,7 @@ class Publish
 		puts cmd
 		`#{cmd}`
 	end
-	
+
 	def start
 		urls.each do |url|
 			fetch_url(url)
