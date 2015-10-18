@@ -26,7 +26,7 @@ class Publish
 		list << "/assets/icons/festival_award.png"
 
 		# video
-		list << "/assets/concept.mp4"
+		list << "/assets/concept2.mp4"
 
 
 
