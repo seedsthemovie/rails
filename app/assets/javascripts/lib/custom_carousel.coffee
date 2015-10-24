@@ -1,9 +1,12 @@
 
+log= (message)->
+	console.log(message)
+
 carousel= ->
 	$('.custom_carousel')
 
 images_list= ->
-	carousel().data('list')
+	carousel().children('img.carousel_image')
 
 carousel_index= ->
 	carousel().data('index')
@@ -12,7 +15,8 @@ load_carousel= ->
 	set_carousel_index(carousel_index())
 
 set_carousel_index= (index)->
-	carousel()[0].src = images_list()[index]
+	images_list().hide()
+	$(images_list()[index]).show()
 	carousel().data('index', index)
 
 set_prev= ->

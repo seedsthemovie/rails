@@ -1,14 +1,23 @@
 .full-screen-background
 	.vertical-centered-parent
 		.vertical-centered
-			- image_paths = (1..4).to_a.collect {|i| asset_path "concepts/shelter/shelter.large.b.0#{i}.jpg" }
-			%img.custom_carousel{data: {index: 0, list: image_paths} }
+
+			-#%img.custom_carousel{data: {index: 0, list: image_paths} }
+			.custom_carousel{data: {index: 0}}
+				-#{data: {index: 0, list: image_paths} }
+				-#- image_paths = (1..4).to_a.collect {|i| asset_path "concepts/shelter/shelter.large.b.0#{i}.jpg" }
+				- (1..4).to_a.each do |i|
+					= image_tag "concepts/shelter/shelter.large.b.0#{i}.jpg", class: "carousel_image"
+
 
 				.actions-parent.gradient.text-right
 
 					.main_title
 						%h1 SEEDS
-						%h5 a feature film by Guillaume Fradin
+						.logline
+							%h5
+								A young and ambitious scientist has been selected to be isolated in a NASA shelter
+								to test the equipment for sustaining life on Mars. But she will soon realise that the mission is much darker.
 
 					.credentials
 						%h6 &bull; Bronze award in the science fiction category at the Beverly Hills Screenplay Competition
@@ -16,13 +25,17 @@
 						-#= image_tag 'icons/festival_award.png'
 
 					.actions
-						%a.background-control.prev &#8612;
+						%a.button.tiny.radius.notice.background-control.prev
+							%h4
+								%i.fi-arrow-left
 						%a#video_opener.button.tiny.radius.alert
 							-#{href:"#", data: {reveal: {id: "video_modal"}}}
 							%h4
 								%i.fi-play-circle
 								Watch Teaser
-						%a.background-control.next &#8614;
+						%a.button.tiny.radius.notice.background-control.next
+							%h4
+								%i.fi-arrow-right
 
 			= render 'layouts/footer'
 
